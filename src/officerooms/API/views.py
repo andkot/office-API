@@ -38,7 +38,7 @@ def overlaps(interval1, interval2):
 class RoomView(ModelViewSet):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly,]
 
     def get_serializer_class(self):
         if self.action == 'book':
